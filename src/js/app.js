@@ -1,4 +1,4 @@
-i// mport read from './reader';
+// mport read from './reader';
 // import json from './parser';
 
 function read() {
