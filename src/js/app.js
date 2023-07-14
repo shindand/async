@@ -3,17 +3,15 @@ import json from "./parser";
 
 export default class GameSavingLoader {
   static load(){
-return new Promise((resolve, reject) => {
   const data = read(); 
+  data.then((result) => {
+    console.log(result);
+  });
   const value = json(data);
-//console.log(value);
- resolve(value);
-});
+  value.then((result) => {
+     console.log(result);
+  });
   }
 }
   
-GameSavingLoader.load().then((result) => {
-  console.log(result);
-}, (error) => {
-  console.log('ошибка');
-});
+GameSavingLoader.load();
